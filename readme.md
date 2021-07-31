@@ -5,6 +5,15 @@ This is a project demonstrating one method of auto-reload (on save) with Grakkit
 I used Java Express (which is inspired from NodeJS Express) for the backend server within MC. You can swap it out. You could use 
 Websockets as well. 
 
+# How It Works
+
+1. This uses a webserver within the minecraft server.
+2. When in development mode, it enables a new API route called `/reload`.
+3. The solution is built using webpack (which is *fast*) and it will put the build files in `server/plugins/grakkit/dist`.
+4. Using a custom start up script in `scripts/start/index.ts`, it will build the solution using webpack, enable development mode,
+and ping the `/reload` endpoint.
+  * Once the endpoint is hit, well, the server reloads grakkit. 
+
 # Initial Configuration
 
 1. Run `yarn install` (or change over to `npm install`)
