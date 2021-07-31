@@ -16,7 +16,7 @@ function clearConsole() {
 }
 
 function copyDependencies() {
-  const files = fs.readdirSync(PATH_DEPS).filter(f => f.includes(".jar"))
+  const files = fs.readdirSync(PATH_DEPS).filter(f => f.includes(".jar") || f === "config.yml")
 
   files.forEach((file) => 
     fs.copyFileSync(path.join(PATH_DEPS, file), path.join(PATH_GRAKKIT, file))

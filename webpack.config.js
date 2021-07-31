@@ -1,5 +1,4 @@
 /* global __dirname, require, module */
-const http = require('http')
 const webpack = require('webpack')
 const path = require('path')
 
@@ -31,11 +30,6 @@ const createConfig = (env) => ({
         exclude: /(node_modules|bower_components)/,
       },
     ],
-  },
-  externals: {
-    http: 'http',
-    // '@grakkit/server': '@grakkit/server',
-    '@grakkit/server-classes': '@grakkit/server-classes',
   },
   resolve: {
     extensions: ['.json', '.js', '.ts'],
