@@ -18,3 +18,14 @@ Websockets as well.
 
 1. Run `yarn start`
 2. Run `yarn start:server`
+
+# Info
+
+## Deps Folder
+
+When developing plugins, you may need to hook into additional dependencies. You can add those jars to the `./deps` folder. 
+If you need further customization, you can update `scripts/start/index.ts`
+
+## Startup Script
+
+The startup script is forked from Create-React-App's WebpackDevServer. It *works*, but isn't perfect. 
