@@ -7,11 +7,15 @@ Websockets as well.
 
 # How It Works
 
+## Development Mode `npm run start`
 1. This uses a webserver within the minecraft server.
 2. When in development mode, it enables a new API route called `/reload`.
 3. The solution is built using webpack (which is *fast*) and it will put the compiled files in `server/plugins/grakkit/dist`.
 4. Using a custom start up script in `scripts/start/index.ts`, it will build the solution, enable development mode, and ping the `/reload` endpoint.
     * Once the endpoint is hit, well, the server reloads grakkit. 
+
+## Production Mode `npm run build`
+1. Using webpack, it'll build the files to `/dist`. Any code relying on `development` will be disabled.
 
 # Initial Configuration
 
